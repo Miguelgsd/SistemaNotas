@@ -5,7 +5,7 @@ public class GerenciadorTurma {
 
     public GerenciadorTurma(String nomeTurma){
         this.nomeTurma = nomeTurma;
-        this.arrayAluno = Aluno[4];
+        this.arrayAluno = new Aluno[4];
         this.i = 0;
     }
 
@@ -21,20 +21,19 @@ public class GerenciadorTurma {
     public void emitirBoletins(){
         System.out.println("Emissão dos Boletins: \n---------------------------");
         for(int j = 0; j < i; j++){
-            return arrayAluno[j].exibirBoletim();
+            arrayAluno[j].exibirBoletim();
         }
     }
 
     public int contarAprovados(){
+        int aprovados = 0;
         for(int j = 0; j < i; j++){
-            int aprovados = 0;
-
             if(arrayAluno[j].calcularMedia() >= 6.0){
                 aprovados += 1;
             }
-
-            return aprovados;
         }
+
+        return aprovados;
     }
 
     public void exibirMaiorMedia(){
