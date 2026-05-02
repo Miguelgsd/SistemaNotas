@@ -19,6 +19,10 @@ public class Aluno{
         this.nota3 = 0.0;
     }
 
+    public String getAluno(){
+        return this.nome;
+    }
+
     public void lancarNotas(double n1, double n2, double n3){
         this.nota1 = n1;
         this.nota2 = n2;
