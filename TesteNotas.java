@@ -19,6 +19,48 @@ public class TesteNotas{
         System.out.print("\nEscolha uma opção: ");
         opcao = input.nextInt();
 
+        boolean exec = true;
+        switch(opcao){
+            case 1:
+                turma1.emitirBoletins();
+                break;
 
+            case 2:
+                turma1.contarAprovados();
+                break;
+
+            case 3:
+                turma1.exibirMaiorMedia();
+                break;
+
+            case 4:
+                int indice;
+                double n1, n2, n3;
+                System.out.println("Digite o índice do aluno (0, 1, 2): ");
+                indice = input.nextInt();
+            
+                System.out.println("Digite as 3 notas bimestrais (pressione Enter após cada nota):");
+                n1 = input.nextDouble();
+                n2 = input.nextDouble();
+                n3 = input.nextDouble();
+
+                if(indice == 0){
+                    aluno1.lancarNotas(n1, n2, n3);
+                } else if(indice == 1){
+                    aluno2.lancarNotas(n1, n2, n3);
+                } else if(indice == 2){
+                    aluno3.lancarNotas(n1, n2, n3);
+                } else {System.out.println("Opção de índice inválida.");}
+                break;
+
+            case 0:
+                exec = false;
+                System.out.println("Sistema encerrado.");
+                break;
+
+            default:
+                System.out.println("Opção inválida. Tente novamente.");
+
+        }
     }
 }
