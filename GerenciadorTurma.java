@@ -19,8 +19,9 @@ public class GerenciadorTurma {
     }
 
     public void emitirBoletins(){
-        System.out.println("Emissão dos Boletins: \n---------------------------");
+        System.out.println("\nEmissão dos Boletins: ");
         for(int j = 0; j < i; j++){
+            System.out.println("\n-----------------------\n");
             arrayAluno[j].exibirBoletim();
         }
     }
@@ -40,9 +41,9 @@ public class GerenciadorTurma {
         double maiorMedia = 0;
         String maiorAluno = "";
         for(int j = 0; j < i; j++){
-            if(maiorMedia < arrayAluno[i].calcularMedia()){
-                maiorMedia = arrayAluno[i].calcularMedia();
-                maiorAluno = arrayAluno[i].getAluno();
+            if(maiorMedia < arrayAluno[j].calcularMedia()){
+                maiorMedia = arrayAluno[j].calcularMedia();
+                maiorAluno = arrayAluno[j].getAluno();
             }
         }
 

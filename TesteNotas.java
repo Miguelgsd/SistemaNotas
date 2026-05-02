@@ -8,7 +8,7 @@ public class TesteNotas{
         Aluno aluno1 = new Aluno("João", "001");
         Aluno aluno2 = new Aluno("Gabriel", "002");
         Aluno aluno3 = new Aluno();
-        aluno2.lancarNotas(10.0, 5.0, 7.5);
+        aluno3.lancarNotas(10.0, 5.0, 7.5);
 
         turma1.cadastrarAluno(aluno1);
         turma1.cadastrarAluno(aluno2);
@@ -27,14 +27,17 @@ public class TesteNotas{
                     break;
 
                 case 2:
-                    turma1.contarAprovados();
+                    System.out.print("\n");
+                    System.out.println("Número de aprovados: " + turma1.contarAprovados());
                     break;
 
                 case 3:
+                    System.out.print("\n");
                     turma1.exibirMaiorMedia();
                     break;
 
                 case 4:
+                    System.out.print("\n");
                     int indice;
                     double n1, n2, n3;
                     System.out.println("Digite o índice do aluno (0, 1, 2): ");
@@ -47,19 +50,24 @@ public class TesteNotas{
 
                     if(indice == 0){
                         aluno1.lancarNotas(n1, n2, n3);
+                        aluno1.exibirBoletim();
                     } else if(indice == 1){
                         aluno2.lancarNotas(n1, n2, n3);
+                        aluno2.exibirBoletim();
                     } else if(indice == 2){
                         aluno3.lancarNotas(n1, n2, n3);
+                        aluno3.exibirBoletim();
                     } else {System.out.println("Opção de índice inválida.");}
                     break;
 
                 case 0:
+                    System.out.print("\n");
                     exec = false;
                     System.out.println("Sistema encerrado.");
                     break;
 
                 default:
+                    System.out.print("\n");
                     System.out.println("Opção inválida. Tente novamente.");
                     break;
 
