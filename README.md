@@ -37,12 +37,12 @@ O sistema possui 3 classes, com as seguintes funções:
 <hr>
 
 ### Aluno
-Classe criada para dar atributos e métodos aos alunos que serão cadastrados.  
+Classe criada para dar atributos e métodos aos alunos que serão cadastrados. Possui um construtor parametrizado e um construtor default.  
 
 **Atributos:**  
-- Nome;
-- Matrícula;
-- Nota 1, Nota 2, Nota 3 (Notas referentes a 3 bimestres).
+- String nome;
+- String matrícula;
+- Double Nota 1, Nota 2, Nota 3 (Notas referentes a 3 bimestres).
 
 **Métodos:**  
 - getAluno() - retorna o nome do aluno;
@@ -50,3 +50,20 @@ Classe criada para dar atributos e métodos aos alunos que serão cadastrados.
 - calcularMedia() - calcula a média aritmética das 3 notas do aluno;
 - verificarSituacao() - analisa a situação do aluno. Baseado em comparações com a média, retorna se ele está aprovado, reprovado ou em recuperação;
 - exibirBoletim() - reúne todas as informações do aluno e retorna com saída formatada ao usuário.  
+
+<hr>
+
+### GerenciadorTurma
+Classe responsável por criar e gerenciar uma turma, tratando os alunos no coletivo. Possui um construtor parametrizado e um construtor default.  
+
+**Atributos:**  
+- String nomeTurma;
+- Aluno[] arrayAluno;
+- int i (contador);
+
+**Métodos:**  
+- cadastrarAluno() - adiciona um aluno ao array, caso ainda haja espaço;
+- emitirBoletins() - chama o método *exibirBoletim* de cada aluno dentro do array;
+- contarAprovados() - conta quantos alunos possuem média igual ou maior que 6;
+- exibirMaiorMedia() - percorre o array e analisa qual dos alunos possui maior média. Em seguida, exibe o resultado.
+
