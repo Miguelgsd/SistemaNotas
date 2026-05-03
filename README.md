@@ -85,3 +85,12 @@ Possui um menu de 5 opções, que fica em looping pela estrutura do-while. Cada 
 0 - Encerra o sistema.  
 
 Qualquer outra opção inválida retornará um aviso ao usuário.
+
+## Informações adicionais
+**Tecnologias utilizadas:**  
+- Java 21.0.11;
+- Vim;
+- Nano.
+
+**Desenvolvido por:**  
+- Miguel, 2° período.
