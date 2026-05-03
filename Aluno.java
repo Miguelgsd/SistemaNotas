@@ -47,7 +47,7 @@ public class Aluno{
         System.out.println("Nome do aluno: " + this.nome);
         System.out.println("Matrícula: " + this.matricula);
         System.out.println("Notas:\n1º Bimestre: " + this.nota1 + "\n2º Bimestre: " + this.nota2 + "\n3º Bimestre: " + nota3);
-        System.out.println("Média do aluno: " + calcularMedia());
+        System.out.printf("Média do aluno: %.2f\n", calcularMedia());
         System.out.println("Situação do aluno: " + verificarSituacao());
     }
 }
