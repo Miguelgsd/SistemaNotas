@@ -65,5 +65,23 @@ Classe responsável por criar e gerenciar uma turma, tratando os alunos no colet
 - cadastrarAluno() - adiciona um aluno ao array, caso ainda haja espaço;
 - emitirBoletins() - chama o método *exibirBoletim* de cada aluno dentro do array;
 - contarAprovados() - conta quantos alunos possuem média igual ou maior que 6;
-- exibirMaiorMedia() - percorre o array e analisa qual dos alunos possui maior média. Em seguida, exibe o resultado.
+- exibirMaiorMedia() - percorre o array e analisa qual dos alunos possui maior média. Em seguida, exibe o resultado.  
 
+### TesteNotas
+Classe com o método main(). Utiliza todas as outras classes para que o sistema funcione.  
+
+**O que ela faz:**  
+- Cria um objeto com a classe GerenciadorTurma, chamado "3° Ano A";
+- Cria 3 objetos Aluno, usando o construtor parametrizado 2 vezes e o construtor default 1 vez;
+- Altera as notas do objeto criado com o construtor default;
+- Cadastra os 3 alunos na turma 3° Ano A.
+
+**Menu interativo**  
+Possui um menu de 5 opções, que fica em looping pela estrutura do-while. Cada opção realizará sua determinada função, sendo elas:  
+1 - chama o método *emitirBoletins()*, do GerenciadorTurma;  
+2 - chama o método *contarAprovados()*, do GerenciadorTurma;  
+3 - chama o método *exibirMaiorMedia()*, do GerenciadorTurma;  
+4 - solicita ao usuário o índice do aluno que terá suas notas lançadas, armazenando na variável *indice*. Em seguida, pede as 3 notas bimestrais, que são armazenadas em *n1, n2, n3*, respectivamente. Após isso, realiza uma comparação para encontrar o aluno correspondente e chama os métodos lancarNotas() e exibirBoletim(), do Aluno, para lançar as notas e exibir o boletim atualizado;  
+0 - Encerra o sistema.  
+
+Qualquer outra opção inválida retornará um aviso ao usuário.
