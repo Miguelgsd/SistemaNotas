@@ -47,6 +47,6 @@ public class GerenciadorTurma {
             }
         }
 
-        System.out.println("O aluno com a maior média foi: " + maiorAluno + "\nSua nota foi: " + maiorMedia);
+        System.out.println("O aluno com a maior média foi: " + maiorAluno + "\nSua média foi: " + maiorMedia);
     }
 }
